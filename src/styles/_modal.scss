@@ -1,0 +1,39 @@
+.modal-content {
+    padding: 15px;
+    text-align: center;
+
+    h1 {    
+        font-size: 60px;
+        color: #dc4545;
+    }
+}
+
+.btn-normal {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #e6e6e6;
+    color: #3d3d3d;
+    min-width: 100px;
+    padding: 0 15px;
+    margin: 0 15px;
+    line-height: 40px;
+    border-radius: 20px;
+    transition: .2s all ease-out;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+        background: #3d3d3d;
+        color: #fff;
+    }
+    
+    &.btn-remove {
+        &:hover {
+            background: #dc4545;
+            color: #fff;
+        }
+    }
+}

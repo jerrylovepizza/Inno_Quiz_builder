@@ -1,0 +1,107 @@
+
+$tooltip-color: #FDFDFD;
+$tooltip-text-color: #32373C;
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-trigger {
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.tooltip-bubble {
+    max-width: 300px;    
+    position: absolute;
+    z-index: 10;    
+
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    // }
+    
+    .tooltip-wrapper {
+        display: flex;
+        width: 100%;
+        background: $tooltip-color;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        color: $tooltip-text-color;
+        padding: 10px 5px 10px 10px;
+        border-radius: 4px;  
+    }
+
+    .tooltip-icon {
+        margin-right: 10px;
+    }
+
+    .arrow {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 11px;
+        border-top-color: rgba(0,0,0,.25);
+        border-bottom-width: 0;
+        left: 10px;
+
+        &:after {
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 10px;
+            content: "";
+            border-bottom-width: 0;
+            border-top-color: #fff;
+            bottom: 1px;
+            margin-left: -10px;
+        }
+    }
+
+    &.tooltip-bottom {
+        .arrow {
+            left: auto;
+            right: 10px;
+            top: -10px;
+
+            border-bottom-color: rgba(0, 0, 0, 0.25);
+            border-top-width: 0;
+            border-top-color: transparent;
+            border-bottom-width: 11px;
+
+            &:after {
+                border-bottom-width: 10px;
+                border-bottom-color: #fff;
+                border-top-width: 0;
+                bottom: auto;
+                top: 1px;
+            }
+        }
+    }
+}
+
+.tooltip-top {
+    bottom: 150%;
+    left: -10px;
+    padding-bottom: 10px;    
+}
+
+.tooltip-bottom {
+    padding-bottom: 10px;
+    top: 150%;
+    right: 0;
+}
+
+.tooltip-message {
+  
+  color: $tooltip-text-color;
+    font-size: .75rem;
+    line-height: 1.4;          
+    // background: #fdfdfd;    
+    // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}

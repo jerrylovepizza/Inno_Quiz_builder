@@ -1,0 +1,49 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { 
+  background: #f4f6f6;
+  color: #565555;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  margin: 0;
+  padding: 0;
+}
+
+.nom {
+  margin: 0!important;
+}
+
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+
+@import "tooltip";
+@import "rc-color-picker";
+@import "select";
+@import "element";
+@import "react-tabs";
+@import "recall";
+@import "builder";
+@import "modal";
+@import "result";
+@import "preview";
+

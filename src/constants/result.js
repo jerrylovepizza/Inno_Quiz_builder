@@ -1,0 +1,2 @@
+export const CHANGE_RESULT="CHANGE_RESULT";
+export const READ_RESULT = "READ_RESULT";
